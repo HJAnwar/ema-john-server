@@ -1,12 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config()
 const MongoClient = require('mongodb').MongoClient;
 
 
 
 
-const uri ="mongodb+srv://anwarhossen:anwarhossen2391@cluster0.ckhne.mongodb.net/productEma?retryWrites=true&w=majority";
+const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ckhne.mongodb.net/productEma?retryWrites=true&w=majority`;
 
 const app = express()
 
